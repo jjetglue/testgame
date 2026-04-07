@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Pro Site</title>
+    
+    <!-- 1. Required Scripts for the Bypass to work -->
+    <script src="https://unpkg.com"></script>
+    <script type="module" src="https://unpkg.com"></script>
+
     <style>
-        /* 1. Remove browser default margins/padding */
+        /* Remove browser default margins/padding */
         html, body {
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
-            overflow: hidden; /* Prevents double scrollbars */
+            overflow: hidden; 
         }
 
-        /* 2. Style the iframe to fill the screen */
+        /* Style the iframe to fill the screen */
         iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            border: none;    /* Removes the default gray border */
-            display: block;  /* Removes the small gap at the bottom */
+            border: none;
+            display: block;
         }
     </style>
 </head>
 <body>
+
+<!-- 2. Added 'is="x-frame-bypass"' to trigger the proxy -->
 <iframe 
-    src="https://roblox.com" 
-    width="100%" 
-    height="100%" 
+    is="x-frame-bypass"
+    src="https://coolmathgames.com" 
     title="pro"
     sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation"
     style="border:none;">
 </iframe>
+
 </body>
 </html>
